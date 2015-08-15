@@ -1,15 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<meta charset="utf-8">
-<title>coolness as a function of time</title>
-<link rel=stylesheet href="./style.css">
-<script src="observe.js"></script>
+<html lang=en>
+<meta charset=utf-8>
+<title>Simple JS FRP Example</title>
+<link href=http://fonts.googleapis.com/css?family=Inconsolata:400,700 
+      rel=stylesheet>
+<link href=http://fonts.googleapis.com/css?family=Lato:900italic 
+      rel="stylesheet">
+<link href=./style.css rel=stylesheet>
+<script src=observe.js></script>
 <body>
-  <h1>Simple JS FRP Example! Cool!</h1>
+  <main>
+    <h1>Simple JS FRP Example!</h1>
+    <div><button>increment</button> that number!</div>
+    <div><output>0</output> slices of pizza</div>
+  </main>
+  <pre><code><b>var</b> $ = <b>document</b>.querySelector.bind(<b>document</b>)
+  , model = { value: <i>0</i> }
 
-  <button>increment</button>
-  that number!
-  <output>0</output>
+$(<i>'button'</i>).onclick = () =&gt; <b>{</b> model.value += <i>1</i> <b>}</b>
 
-  <script src="frp.js"></script>
+<b>Object</b>.observe(model, () =&gt; <b>{</b> 
+  $(<i>'output'</i>).textContent = model.value 
+<b>}</b>)</code></pre>
+  <script src=frp.js></script>
 </body>
+</html>
