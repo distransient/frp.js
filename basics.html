@@ -17,15 +17,19 @@
     <h1>Simple JS FRP Example</h1>
     <div><button>increment</button> that number!</div>
     <div><output>0</output> slices of pizza</div>
+    <br/><br/>
+    <div><a href=http://elm-lang.org/examples/buttons>Example in elm</a></div>
   </main>
   <pre><code><b>var</b> $ = <b>document</b>.querySelector.bind(<b>document</b>)
   , model = { value: <i>0</i> }
 
-$(<i>'button'</i>).onclick = () =&gt; <b>{</b> model.value += <i>1</i> <b>}</b>
+$(<i>'button'</i>).onclick = <b>function</b>() <b>{</b> 
+  model.value += <i>1</i> 
+<b>}</b>
 
-<b>Object</b>.observe(model, () =&gt; <b>{</b> 
+<b>Object</b>.observe(model, <b>function</b>() <b>{</b> 
   $(<i>'output'</i>).textContent = model.value 
 <b>}</b>)</code></pre>
-  <script src=frp.js></script>
+  <script src=basics.js></script>
 </body>
 </html>
