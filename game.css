@@ -1,0 +1,55 @@
+html {
+  background: url('./stars.svg');
+  animation: 200s linear 0s normal none infinite running scrollstars;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+@keyframes scrollstars {
+  from { background-position: 100% 0%; }
+  to { background-position: -100% 0%; }
+}
+
+img[moon] {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 7em;
+  background: url('./moon.svg');
+  background-size: cover;
+}
+
+[x] { 
+  position: absolute;
+  height: 8em;
+  width: 10em;
+  bottom: 7em;
+  animation: 0s linear 0s normal none infinite running x;
+}
+
+[y] { animation: 0s linear 0s normal none infinite running y }
+
+[r] { animation: 0s linear 0s normal none infinite running r}
+
+[y], [r] { 
+  position: relative;
+  height: 8em;
+  width: 10em;
+}
+
+[ship] { background: url('./ship.svg') no-repeat scroll bottom ;background-size: contain; }
+
+@keyframes x {
+  from { left: 0% }
+  to { left: 100% }
+}
+
+@keyframes y {
+  from { bottom: 0% }
+  to { bottom: calc(100vh - 7em) }
+}
+
+@keyframes r {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
