@@ -23,7 +23,7 @@ Browser support is essentially nonexistent, since the api is still subject
 to change, and probably will be for another couple months. Chrome versions 44+
 support the current ES7 proposal by enabling the "Enable Experimental 
 JavaScript" option in `chrome://flags`. I'm currently using 
-[ijdarling/Object.observe][] as a polyfill in this repository.
+[ijdarling/Object observe][] as a polyfill in this repository.
 
 ### [Query Selector][] (Selectors API Level 1/2)
 
@@ -45,16 +45,7 @@ Browser support is all current browsers. You can assume it will work for anyone
 except that one holdover family member you have that refuses to stop using
 Internet Explorer 7 (or worse).
 
-### [Arrow Functions][] (ECMAScript 6)
-
-You know how when you write callbacks you have to spell out the whole word
-"function"? Well, not anymore. Instead of writing `function(one, two, three) 
-{ }`, you can write `(one, two, three) => { }`. This one is relatively new, so
-it's only supported by current versions of Chrome and Firefox (the ones that
-have implemented ES6 in their JS engines; circumvent this by transpiling your 
-ES6 to ES5 with [thlorenz/es6ify][]). 
-
-[Object.observe]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe
+[Object observe]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe
 [Query Selector]: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
 [Arrow Functions]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 
