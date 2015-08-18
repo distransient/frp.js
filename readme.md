@@ -46,8 +46,5 @@ except that one holdover family member you have that refuses to stop using
 Internet Explorer 7 (or worse).
 
 [Object.observe]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe
-[Query Selector]: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
-[Arrow Functions]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
-
 [ijdarling/Object.observe]: https://github.com/jdarling/Object.observe
-[thlorenz/es6ify]:         https://github.com/thlorenz/es6ify
+[Query Selector]: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
